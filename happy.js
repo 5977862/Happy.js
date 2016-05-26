@@ -129,6 +129,7 @@
                 }
 
                 if (testResult) {
+                    if (isFunction(config.error)) config.error(error);
                     errorTarget.addClass(fieldErrorClass).after(errorEl);
                     return false;
                 } else {
