@@ -1,8 +1,9 @@
 /*global $*/
 (function happyJS($) {
-    $.fn.isHappy = function isHappy(config) {
+    $.fn.isHappy = function isHappy(conf) {
         var fields = [], item;
         var pauseMessages = false;
+        var config = $.extend({}, conf);
 
         function isFunction(obj) {
             return typeof obj === 'function';
